@@ -311,10 +311,10 @@ public class CalendarScraperMinimal {
 
     public static void main(String[] args) throws Exception {
         CalendarScraperMinimal scraper = new CalendarScraperMinimal();
-        List events = scraper.getCalendarEvents("https://webmail-wh.ldschurch.org", "galbraithbl", "password01", 12, null, new SwingUI.UIGunk());
+        List events = scraper.getCalendarEvents("url", "username", "password", 12, null, new SwingUI.UIGunk());
         String vcal = VcalendarExporter.getVcalendar(events);
 
-        File file = new File("/Users/bgalbs/test.ics");
+        File file = new File("test.ics");
         FileWriter writer = new FileWriter(file);
         writer.write(vcal);
         writer.close();
