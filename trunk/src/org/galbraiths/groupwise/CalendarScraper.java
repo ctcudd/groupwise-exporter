@@ -289,7 +289,7 @@ public class CalendarScraper {
         BasicConfigurator.configure();
 
         CalendarScraper scraper = new CalendarScraper();
-        List events = scraper.getCalendarEvents("https://webmail-wh.ldschurch.org", "galbraithbl", "password01", 12);
+        List events = scraper.getCalendarEvents("url", "username", "password", 12);
         String vcal = VcalendarExporter.getVcalendar(events);
 
         File file = new File("/Users/bgalbs/test.ics");
